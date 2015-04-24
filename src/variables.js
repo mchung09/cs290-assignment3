@@ -14,6 +14,10 @@ function variableModification(a) {
   var asString;
   var yourNumberIs;
   //your code here
+  var a;
+  plus5 = 5 + a;
+  asString = String(a);
+  yourNumberIs = "Your Number is " + String(a);
 
   //end your code
   return [plus5, asString, yourNumberIs, a];
@@ -29,7 +33,13 @@ false otherwise
 */
 function isString(b) {
   //your code here
-  return undefined;
+  if (typeof b == 'string') {
+     return true;
+  }
+  else {
+     return false;
+  }
+  
   //end your code
 }
 
@@ -42,6 +52,14 @@ return true if c is null, false otherwise
 */
 function isNull(c) {
   //your code here
-  return undefined;
+  /*I found the triple equal sign on the
+  Comparison Operators section in the Mozilla page of the CS290 week 3 module.*/
+  if (c === null) {
+    return true;
+  }
+  else {
+    return false;
+  }
+  
   //end your code
 }
