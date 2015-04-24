@@ -1,3 +1,7 @@
 Start: Thu, 23 Apr 2015 22:30:37 -0400
 End: Thu, 23 Apr 2015 22:59:37 -0400
 Tasks: Added Useless Function Into functions.js
+
+Start: Thu, 23 Apr 2015 23:15:00 -0400
+End: Fri, 24 Apr 2015 00:12:32 -0400
+Tasks: Updated Uselessfunction to pass the test, then wrote the bar function

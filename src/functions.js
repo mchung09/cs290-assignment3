@@ -92,4 +92,22 @@ function GitLog(hash, date, message) {
 
 //your code here
 
+/*I am starting off from the instructor's template in Piazza */
+function parseGit(logArray) {
+  var results = []; //This array will contain a list of GitLog objects
+  var i;
+  var x 
+  //your code goes here
+  for (i=0; i<logArray.length; i++) {
+  
+  		results.push(new GitLog(logArray[i].split(' ')[0], 
+  			new Date(logArray[i].split(' ')[1] + ' ' + logArray[i].split(' ')[2] + ' ' 
+  			 + logArray[i].split(' ')[3] + ' ' + logArray[i].split(' ')[4] + ' ' + logArray[i].split(' ')[5] + ' '
+  			 + logArray[i].split(' ')[6]), 
+  			logArray[i].split('"')[1]));
+  
+  }//here you loop over the logArray one by one, parse each commit, create a GitLog object with appropriate values and add it to results array	
+  //end of your code
+  return results;
+}
 //end your code
