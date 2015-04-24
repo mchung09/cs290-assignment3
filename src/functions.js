@@ -15,7 +15,7 @@
 //your code here
 function uselessFunction() {
 
-	retrun null;
+	return null;
 }
 //end your code
 
@@ -33,7 +33,29 @@ var barType = typeof bar;
 */
 
 //your code here
+bar = function (doubleArray) {
 
+	var i;
+	var _tempArray = doubleArray.concat();  
+	/*It seems that you need the concat() function, so that changes to
+	doubleArray won't affect the _tempArray. Otherwise, the function will fail.
+	I found about the concat function @ 
+	http://stackoverflow.com/questions/16232915/copying-an-array-of-objects-into-another-array-in-javascript*/
+
+	for(i=0; i<doubleArray.length; i++) {
+		doubleArray[i] *= 2;
+	}
+
+	for(i=0; i<doubleArray.length; i++) {
+		
+		if ((_tempArray[i] * 2) != doubleArray[i]) {
+			return false;
+		}
+	}
+
+	return true;
+
+}
 //end your code
 
 /**
