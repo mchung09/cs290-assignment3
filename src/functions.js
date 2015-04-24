@@ -13,7 +13,10 @@
 */
 
 //your code here
+function uselessFunction() {
 
+	retrun null;
+}
 //end your code
 
 var bar = 'not a function';
