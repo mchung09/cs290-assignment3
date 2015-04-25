@@ -13,3 +13,7 @@ Tasks: Added ParseGit Function (Passed the test)
 Start: Fri, 24 Apr 2015 19:05:00 -0400
 End: Fri, 24 Apr 2015 19:36:07 -0400
 Tasks: Added code into variable.js. All code sections passed test.
+
+Start: Fri, 24 Apr 2015 19:54:00 -0400
+End: Fri, 24 Apr 2015 21:37:12 -0400
+Tasks: Added code into objects.js. Passed all tests.
