@@ -10,7 +10,14 @@
 
 function returnObjectLiteral() {
   //your code here
-  return undefined; //Modify ONLY this line
+  var newObj = {
+  brand: "Pepperidge Farm",
+  count: 2000,
+  flavor: "Cheddar",
+  type: "Goldfish"
+   }
+
+  return newObj; //Modify ONLY this line
   //end your code
 }
 
@@ -38,7 +45,45 @@ function returnObjectLiteral() {
 */
 
 //your code here
+function MessageLog(user) {
+	
+	this.textArray = [];
+	this.received = 0;
+	this.sent = 0;
+	this.user = user;
 
+	this.logMessage = function(messageText, direction) {
+		
+
+		if(direction == 0) {
+			this.sent++;	
+		}
+		else if (direction == 1) {
+			this.received++;			
+		}
+		else {
+			
+		}
+
+		/*I found the unshift method from www.w3schools.com */
+		this.textArray.unshift(messageText);
+		
+	};
+
+	
+	this.getSentMessage = function(n) {
+
+		return this.textArray[n];
+	
+	};
+	this.totalSent = function() {
+		return this.sent;
+	};
+	this.totalReceived = function() {
+		return this.received;
+	};
+
+}
 //end your code
 
 /**
@@ -47,7 +92,9 @@ function returnObjectLiteral() {
 * received.
 */
 //your code here
-
+MessageLog.prototype.lastReceivedMessage = function() {
+		return this.textArray[0];
+};
 //end your code
 
 /**
@@ -57,5 +104,8 @@ function returnObjectLiteral() {
 */
 
 //your code here
-
+var myLog = new MessageLog('BlackHatGuy');
+myLog.logMessage("foo", 1);
+myLog.logMessage("bar", 1);
+myLog.logMessage("baz", 1);
 //end your code
